@@ -1,0 +1,23 @@
+{
+  "name": "logger-logs",
+  "version": "1.0.0",
+  "description": "A simple logger to display messages with file name and line number.",
+  "keywords": ["logger", "debugging", "file-name", "line-number"],
+  "author": "Satyam kushwaha",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "license": "ISC",
+  "jest": {
+    "transform": {
+      "^.+\\.jsx?$": "babel-jest"
+    }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
+}
