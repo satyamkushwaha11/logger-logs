@@ -1,14 +1,42 @@
 {
   "name": "logger-logs",
-  "version": "1.0.0",
-  "description": "A simple logger to display messages with file name and line number.",
-  "keywords": ["logger", "debugging", "file-name", "line-number"],
-  "author": "Satyam kushwaha",
+  "version": "1.0.1",
+  "description": "A lightweight and easy-to-use logger for debugging JavaScript applications. Displays messages with precise file names and line numbers to simplify debugging.",
+  "keywords": [
+    "logger",
+    "debugging",
+    "file-name",
+    "line-number",
+    "JavaScript",
+    "debugging-tool",
+    "error-logging",
+    "logger-library",
+    "logger-logs",
+    "node logger",
+    "logger npm ",
+    "logs"
+  ],
+  "author": {
+    "name": "Satyam Kushwaha",
+    "email": "satyamkushwaha1101@gmail.com",
+    "url": "https://github.com/satyamkushwaha11" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/satyamkushwaha/logger-logs.git"
+  },
+  "homepage": "https://github.com/satyamkushwaha/logger-logs#readme",
+  "bugs": {
+    "url": "https://github.com/satyamkushwaha/logger-logs/issues"
+  },
   "main": "src/index.js",
   "scripts": {
     "test": "jest"
   },
   "license": "ISC",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "jest": {
     "transform": {
       "^.+\\.jsx?$": "babel-jest"
