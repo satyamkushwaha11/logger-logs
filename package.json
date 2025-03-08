@@ -1,33 +1,44 @@
 {
   "name": "logger-logs",
-  "version": "1.0.1",
-  "description": "A lightweight and easy-to-use logger for debugging JavaScript applications. Displays messages with precise file names and line numbers to simplify debugging.",
+  "version": "1.0.2",
+  "description": "logger-logs is a lightweight and developer-friendly logger for Node.js & JavaScript. Logs errors with precise file names, line numbers, and timestamps, making debugging easier and efficient.",
   "keywords": [
-    "logger",
+    "logger-logs",
+    "logger npm",
     "debugging",
-    "file-name",
-    "line-number",
-    "JavaScript",
+    "JavaScript logger",
+    "Node.js logging",
+    "error tracking",
+    "console logger",
+    "file-name logger",
+    "line-number logger",
+    "performance logging",
+    "log monitoring",
+    "real-time logs",
     "debugging-tool",
     "error-logging",
-    "logger-library",
-    "logger-logs",
+    "logging utility",
+    "logger library",
     "node logger",
-    "logger npm ",
-    "logs"
+    "npm logger",
+    "js logger"
   ],
   "author": {
     "name": "Satyam Kushwaha",
     "email": "satyamkushwaha1101@gmail.com",
-    "url": "https://github.com/satyamkushwaha11" 
+    "url": "https://github.com/satyamkushwaha11"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/satyamkushwaha/logger-logs.git"
   },
-  "homepage": "https://github.com/satyamkushwaha/logger-logs#readme",
+  "homepage": "https://www.npmjs.com/package/logger-logs",
   "bugs": {
     "url": "https://github.com/satyamkushwaha/logger-logs/issues"
+  },
+  "funding": {
+    "type": "github",
+    "url": "https://github.com/sponsors/satyamkushwaha11"
   },
   "main": "src/index.js",
   "scripts": {

@@ -1,66 +1,144 @@
-# logger-logs 📜
 
-**logger-logs** is a lightweight and flexible utility for logging messages with detailed context. It outputs the **file path**, **line number**, and **formatted messages** to help you trace and debug issues effortlessly.
+## 📜 logger-logs | Lightweight Logger for JavaScript & Node.js  
+
+![NPM Version](https://img.shields.io/npm/v/logger-logs?color=blue&label=version)  
+![Downloads](https://img.shields.io/npm/dt/logger-logs?color=green)  
+![License](https://img.shields.io/npm/l/logger-logs)  
+![GitHub Repo](https://img.shields.io/github/stars/satyamkushwaha11/logger-logs?style=social)  
+
+🚀 **logger-logs** is a powerful yet lightweight **logging utility** for **JavaScript** and **Node.js**. It helps developers **debug applications efficiently** by logging messages with the **file path, line number, and formatted content**.  
+
+🔹 **Perfect for debugging & error tracking**  
+🔹 **Supports structured logging (JSON, objects, arrays, etc.)**  
+🔹 **Zero configuration—just import and log**  
 
 ---
 
-## Features 🚀
+## 🚀 Features  
 
-- **File Path & Line Number**: Automatically logs the file path and the line number where the logger is called.
-- **Supports Multiple Data Types**: Logs strings, objects, arrays, and more in a readable format.
-- **Error Handling**: Prevents logging errors from disrupting your application.
-- **Lightweight & Easy to Use**: Minimal configuration required.
+✅ **File Path & Line Number** – Find exactly where logs originate.  
+✅ **Supports Objects & Arrays** – Structured, easy-to-read logs.  
+✅ **Error-Safe** – Prevents logging issues from breaking your app.  
+✅ **Minimal Overhead** – Keeps performance optimized.  
+✅ **Simple API** – Just call `logger(...)`.  
 
-GITHUB LINK : https://github.com/satyamkushwaha11/logger-logs
 ---
 
-## Installation 🛠️
+## 📦 Installation  
 
-Install the package via npm:
+Install via **npm**:  
 
-```bash
-npm install logger-logs 
+```sh
+npm install logger-logs
 ```
-Or add it directly to your package.json:
-```bash
+
+Or add it manually to your `package.json`:  
+
+```json
 "dependencies": {
-  "logger-logs": "^1.0.0"
+  "logger-logs": "^1.0.1"
 }
 ```
 
------------------------------
+---
 
-Import the Logger
-```bash
+## ⚡ Usage  
+
+### 🔹 **Basic Logging**  
+
+```js
 import { logger } from "logger-logs";
+
+logger("Hello, world!");
 ```
-Basic Usage
-```bash
-logger("This is a simple log message.");
+
+📝 **Output:**  
 ```
-Output:
-```bash
-Path::/path/to/your/file.js,  Line::5,   Message::This is a simple log message
+Path:: /path/to/file.js, Line:: 5, Message:: Hello, world!
 ```
-Logging Objects
-```bash
-logger({ key: "value", status: "success" });
+
+---
+
+### 🔹 **Logging Objects & JSON**  
+
+```js
+logger({ user: "JohnDoe", role: "admin" });
 ```
-Output:
-```bash
-Path::/path/to/your/file.js,  Line::6,   Message::{
-  "key": "value",
-  "status": "success"
+
+📝 **Output:**  
+```
+Path:: /path/to/file.js, Line:: 6, Message:: {
+  "user": "JohnDoe",
+  "role": "admin"
 }
 ```
-Logging Multiple Arguments
-```bash
-logger("User data:", { name: "John Doe", age: 30 });
+
+---
+
+### 🔹 **Logging Multiple Arguments**  
+
+```js
+logger("User details:", { id: 123, name: "Alice" });
 ```
-Output:
-```bash
-Path::/path/to/your/file.js,  Line::7,   Message::User data: {
-  "name": "John Doe",
-  "age": 30
+
+📝 **Output:**  
+```
+Path:: /path/to/file.js, Line:: 7, Message:: User details: {
+  "id": 123,
+  "name": "Alice"
 }
 ```
+
+---
+
+## 📖 Advanced Usage  
+
+### 🔹 **Customizing Log Output**  
+The logger automatically captures file path and line numbers, but you can extend its behavior using wrappers.
+
+Example:  
+```js
+function debugLogger(message) {
+  logger(`[DEBUG] ${message}`);
+}
+
+debugLogger("API response received");
+```
+
+---
+
+## 🛠️ Why Choose `logger-logs`?  
+
+✔️ **Beginner-Friendly** – No setup required.  
+✔️ **Optimized for Debugging** – Track errors easily.  
+✔️ **Minimal & Lightweight** – No unnecessary dependencies.  
+✔️ **Works in JavaScript & TypeScript** – Node.js & Browser support.  
+
+---
+
+## 📖 Documentation  
+
+For full documentation, visit:  
+📌 **GitHub Repo** → [logger-logs](https://github.com/satyamkushwaha11/logger-logs)  
+
+---
+
+## 💡 Contributing  
+
+Want to improve this package? Feel free to **fork the repo**, make your changes, and submit a **pull request**.  
+
+---
+
+## 📩 Support  
+
+🔹 **Found a bug?** Report it here: [Issues](https://github.com/satyamkushwaha11/logger-logs/issues)  
+🔹 **Need help?** Reach out via [Email](mailto:satyamkushwaha1101@gmail.com)  
+
+---
+
+## 📜 License  
+
+This package is **open-source** under the **ISC License**.  
+
+🚀 **Install `logger-logs` now and simplify debugging in your JavaScript & Node.js apps!** 🚀  
+
