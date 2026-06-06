@@ -1,0 +1,12 @@
+# Source & config are not needed by consumers — only the built dist/ ships.
+src
+test
+coverage
+.github
+tsconfig.json
+tsup.config.ts
+jest.config.cjs
+.eslintrc.cjs
+.prettierrc.json
+*.log
+.env

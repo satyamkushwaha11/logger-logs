@@ -1,27 +1,39 @@
 {
   "name": "logger-logs",
-  "version": "1.0.2",
-  "description": "logger-logs is a lightweight and developer-friendly logger for Node.js & JavaScript. Logs errors with precise file names, line numbers, and timestamps, making debugging easier and efficient.",
+  "version": "2.0.0",
+  "description": "logger-logs is a fast, lightweight, structured logger for Node.js, TypeScript & JavaScript. Zero-dependency logging with log levels, JSON output, file/line numbers, timestamps, child loggers, pluggable transports, and built-in sensitive-data redaction.",
   "keywords": [
+    "logger",
+    "logging",
+    "log",
+    "logs",
     "logger-logs",
-    "logger npm",
+    "structured-logging",
+    "json-logger",
+    "nodejs-logger",
+    "node-logger",
+    "typescript-logger",
+    "javascript-logger",
+    "winston-alternative",
+    "pino-alternative",
+    "log-levels",
+    "debug",
     "debugging",
-    "JavaScript logger",
-    "Node.js logging",
-    "error tracking",
-    "console logger",
-    "file-name logger",
-    "line-number logger",
-    "performance logging",
-    "log monitoring",
-    "real-time logs",
-    "debugging-tool",
+    "error-tracking",
     "error-logging",
-    "logging utility",
-    "logger library",
-    "node logger",
-    "npm logger",
-    "js logger"
+    "console-logger",
+    "file-logger",
+    "file-name-logger",
+    "line-number-logger",
+    "log-transport",
+    "child-logger",
+    "redaction",
+    "pii-redaction",
+    "observability",
+    "zero-dependency",
+    "lightweight-logger",
+    "esm",
+    "cjs"
   ],
   "author": {
     "name": "Satyam Kushwaha",
@@ -30,33 +42,65 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/satyamkushwaha/logger-logs.git"
+    "url": "git+https://github.com/satyamkushwaha11/logger-logs.git"
   },
-  "homepage": "https://www.npmjs.com/package/logger-logs",
+  "homepage": "https://github.com/satyamkushwaha11/logger-logs#readme",
   "bugs": {
-    "url": "https://github.com/satyamkushwaha/logger-logs/issues"
+    "url": "https://github.com/satyamkushwaha11/logger-logs/issues"
   },
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/satyamkushwaha11"
   },
-  "main": "src/index.js",
-  "scripts": {
-    "test": "jest"
-  },
   "license": "ISC",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": false,
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "engines": {
     "node": ">=14.0.0"
   },
-  "jest": {
-    "transform": {
-      "^.+\\.jsx?$": "babel-jest"
-    }
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "clean": "rimraf dist coverage",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint \"src/**/*.ts\" \"test/**/*.ts\"",
+    "lint:fix": "eslint \"src/**/*.ts\" \"test/**/*.ts\" --fix",
+    "format": "prettier --write \"**/*.{ts,js,json,md}\"",
+    "format:check": "prettier --check \"**/*.{ts,js,json,md}\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepublishOnly": "npm run clean && npm run build",
+    "prepack": "npm run build"
   },
   "devDependencies": {
-    "@babel/core": "^7.26.0",
-    "@babel/preset-env": "^7.26.0",
-    "babel-jest": "^29.7.0",
-    "jest": "^29.7.0"
+    "@types/jest": "^29.5.14",
+    "@types/node": "^20.17.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^9.1.0",
+    "jest": "^29.7.0",
+    "prettier": "^3.3.3",
+    "rimraf": "^5.0.10",
+    "ts-jest": "^29.2.5",
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.3"
   }
 }

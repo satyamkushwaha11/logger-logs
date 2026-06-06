@@ -1,2 +1,7 @@
-.env 
 node_modules
+dist
+coverage
+*.log
+.env
+.DS_Store
+readme-preview.html
